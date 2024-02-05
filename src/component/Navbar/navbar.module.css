@@ -1,0 +1,29 @@
+.header{
+    background-color: #1e1e1e;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+.logo{
+    height: 80px;
+    width: 80px;
+}
+
+.header_container{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_container a{
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .header-container{
+        width:90%;
+    }
+}
