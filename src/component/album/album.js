@@ -8,7 +8,7 @@ export default function Album(props){
     }
     return (
         <>
-            <div className={style.card_container}>
+            <div className={style.album_card_container}>
                 <div className={style.card_image} onClick={handleClick}></div>
                 <div className={style.card_name}>
                     {info.AlbumName}

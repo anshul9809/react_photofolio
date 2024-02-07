@@ -12,6 +12,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 export default function ImageForm(props){
+    console.log("props in imageform", props);
     
     const {albumId,updateImage,setUpdateImage,setShowImageForm} = props;
 
@@ -20,38 +21,39 @@ export default function ImageForm(props){
 
     useEffect(()=>{
         if(updateImage){
-            imageNameRef.current.value=updateImage.name;
+            imageTitleRef.current.value=updateImage.name;
             imageUrlRef.current.value=updateImage.link;
         }
     },[]);
     
     function clearForm(){
-        imageNameRef.current.value=null;
+        imageTitleRef.current.value=null;
         imageUrlRef.current.value=null;
-        imageNameRef.current.focus();
+        imageTitleRef.current.focus();
     }
 
     async function handleUpdateSubmit(event){
+        console.log("name is ", imageTitleRef.current.value);
         event.preventDefault();
-        const prevData = {
-            name:updateImage.name,
-            link:updateImage.link
-        };
+        // const prevData = {
+        //     name:updateImage.name,
+        //     link:updateImage.link
+        // };
 
-        const  new_data = {
-            name:imageNameRef.current.value,
-            link:imageUrlRef.current.value
-        };
+        // const new_data = {
+        //     name:imageTitleRef.current.value,
+        //     link:imageUrlRef.current.value
+        // };
 
-        const albumRef = doc(db, 'album', albumId);
-         updateDoc(albumRef,{
-            imageList:arrayUnion(newData)
-        });
+        // const albumRef = doc(db, 'albums', albumId);
+        //  updateDoc(albumRef,{
+        //     imageList:arrayUnion(new_data)
+        // });
 
-        updateDoc(albumRef,{
-            imageList:arrayRemove(oldData),
+        // updateDoc(albumRef,{
+        //     imageList:arrayRemove(prevData),
             
-        });
+        // });
 
         toast.success(" Image Updated !")
 
@@ -66,11 +68,12 @@ export default function ImageForm(props){
         event.preventDefault();
         
         const data={
-            name:imageNameRef.current.value,
+            name:imageTitleRef.current.value,
             link:imageUrlRef.current.value
         };
 
-        const albumRef = doc(db, 'album', albumId);
+        const albumRef = doc(db, 'albums', albumId);
+        console.log("album ref is ", albumRef);
         await updateDoc(albumRef,{
             imageList:arrayUnion(data)
         });
@@ -88,9 +91,9 @@ export default function ImageForm(props){
             <div className={style.form_Container}>
                 <h1 className={style.form_Heading}>{!updateImage?"Add an Image":"Update Image"}</h1>
 
-                <form onSubmit={updateImage?handleSubmit:handleUpdateSubmit}>
-                    <input type="text" name="title" ref={imageTitleRef} required/>
-                    <input type="text" name="image_url" ref={imageUrlRef} required/>
+                <form onSubmit={updateImage?handleUpdateSubmit:handleSubmit}>
+                    <input type="text" ref={imageTitleRef} required/>
+                    <input type="text" ref={imageUrlRef} required/>
 
                     <button 
                         onClick={clearForm}>Clear

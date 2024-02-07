@@ -34,10 +34,10 @@ export default function AlbumForm(){
 
         <div className={style.form_Container}>
             <h1>Create Your album with a Keyword for specifity</h1>
-            <form onSubmit={handleSubmit} >
-                <input type="text" name="Name" ref={nameRef} className={style.input_Class} />
-                <button type="submit" className={style.submit_button}>Add</button>
-                <button type="reset" className={style.reset_Button}>Clear</button>
+            <form onSubmit={handleSubmit} className={style.albumForm}>
+                <input type="text" name="Name" ref={nameRef} className={style.input_class} />
+                <button type="submit" className={style.btn_grad}>Add</button>
+                <button type="reset" className={style.reset_button}>Clear</button>
             </form>
         </div>
     </>

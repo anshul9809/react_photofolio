@@ -1,0 +1,62 @@
+.main_container{
+    box-sizing: border-box;
+    padding: 20px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header{
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 800;
+}
+.header h3{
+    font-size: 3em;
+}
+.album_form{
+    width: 80%;
+}
+         
+.btn_grad {
+    background-image: linear-gradient(to right, #003973 0%, #E5E5BE  51%, #003973  100%);
+    padding: 10px 25px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #fefefe;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.btn_grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #1e1e1e;
+    text-decoration: none;
+}
+ 
+
+.album_Container{
+    box-sizing: border-box;
+    margin: 20px;
+    border-radius: 10px;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+@media (max-width: 768px){
+    .header h3{
+        font-size: 1.3rem;
+    }
+}
+

@@ -20,17 +20,15 @@ export default function AlbumList(){
     const [openAlbum, setOpenAlbum] = useState({albumId:"",open:false}); 
 
     useEffect(()=>{
-        const unsub = onSnapshot(collection(db, "albums"), (snapshot)=>{
+        onSnapshot(collection(db, "albums"), (snapshot)=>{
             const card = snapshot.docs.map((doc)=>{
                 return {
                     id: doc.id,
                     ...doc.data()
                 }
             });
-            console.log("card is ", card);
             setAlbumList(card);
         });
-        console.log("Unsub is ",unsub);
     }, []);
 
 
@@ -43,12 +41,12 @@ export default function AlbumList(){
             <div className={style.main_container}>
                 {!openAlbum.open?(
                    <>
-                     <div className={style.album_form}>
+                    <div className={style.album_form}>
                         {showAlbumForm && <AlbumForm/>}
                     </div>
                     <div className={style.header}>
-                        <span>Your Albums</span>
-                        <button onClick={()=>setAlbumForm(!showAlbumForm)}>{!showAlbumForm?"Create Album":"Cancel"
+                        <h3>Your Albums</h3>
+                        <button onClick={()=>setAlbumForm(!showAlbumForm)} className={style.btn_grad}>{!showAlbumForm?"Create Album":"Cancel"
                             }</button>
                     </div>
                     <div className={style.album_Container}>
