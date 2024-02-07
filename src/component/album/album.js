@@ -1,3 +1,5 @@
+import style from "./album.module.css"
+
 export default function Album(props){
     let {info, setOpenAlbum} = props;
 
@@ -6,7 +8,12 @@ export default function Album(props){
     }
     return (
         <>
-            album working
+            <div className={style.card_container}>
+                <div className={style.card_image} onClick={handleClick}></div>
+                <div className={style.card_name}>
+                    {info.AlbumName}
+                </div>
+            </div>
         </>
     );
 }
