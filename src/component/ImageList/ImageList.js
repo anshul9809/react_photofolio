@@ -102,7 +102,7 @@ export default function ImageList(props){
                     <div className={style.lightbox_container}>
                         {/* close button to close the light box */}
                         <button className={style.close_button} onClick={closeLightbox}>
-                            Close
+                            X
                         </button>
                         {/* image of the lightbox */}
                         <img

@@ -10,15 +10,13 @@
 }
 body{
   background-color: #1e1e1e;
+  overflow-x: hidden;
 }
 h1,h2,h3,h4,h5,h6{
   font-weight: 800;
 }
 button{
   cursor: pointer;
-  border-end-end-radius: 10px;
-  border: none;
-  box-shadow: 0px 2px 20px #1e1e1e;
 }
 
 input{

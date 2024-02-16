@@ -6,8 +6,6 @@ import {getFirestore} from "firebase/firestore";
 //import the environment variable from .env file
 // require('dotenv').config();
 
-const app_key = process.env.REACT_APP_FIREBASE_KEY;
-console.log("app_key is ", app_key);
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 

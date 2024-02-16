@@ -1,6 +1,5 @@
 .image_list_container{
     width: 100%;
-    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,4 +62,40 @@
     width: 90%;
     columns: 300px 4;
     column-gap: 30px;
+}
+
+
+.lightbox_overlay{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    transition: all ease-in-out 0.3s;
+    background-color: rgba(0,0, 0,0.3);
+}
+.lightbox_container{
+    width: auto;
+}
+.close_button{
+    position: absolute;
+    top: 80px;
+    right: 80px;
+    background-image: linear-gradient(to right, #D31027 0%, #EA384D  51%, #D31027  100%);
+    padding: 5px 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 10px #eee;
+    border-radius: 10px;
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+.lightbox_image{
+    background-color: white;
 }
