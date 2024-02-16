@@ -1,15 +1,16 @@
 .album_card_container{
     flex: 1 0 20%;
     box-sizing: border-box;
-    border: 1px solid black;
+    border: 1px solid #efefef;
     padding: 10px;
     transition: all ease-in-out 0.3s;
     text-align: center;
     overflow: hidden;
-    color: #1e1e1e;
+    color: #efefef;
     font-size: 24px;
     font-weight: 800;
     position: relative;
+    border-radius: 10px;
 }
 .album_card_container:hover{
     transform: scale(1.01);

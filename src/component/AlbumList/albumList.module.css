@@ -16,6 +16,7 @@
 }
 .header h3{
     font-size: 3em;
+    color: #fefefe;
 }
 .album_form{
     width: 80%;
@@ -28,8 +29,8 @@
     text-transform: uppercase;
     transition: 0.5s;
     background-size: 200% auto;
-    color: #fefefe;            
-    box-shadow: 0 0 20px #eee;
+    color: #fefefe;           
+    box-shadow: 0 0 20px #000000;
     border-radius: 10px;
     display: block;
     font-weight: 800;

@@ -66,36 +66,37 @@ export default function ImageList(props){
     return (<>
         <ToastContainer />
 
-        <div className={style.btn_container}>
-            <button onClick={handleBackClick}>Back to main</button>
+        <div className={style.image_list_container}>
+            <div className={style.btn_container}>
+                <button className={style.btn_grad} onClick={handleBackClick}>Back to main</button>
 
-            <input type="text" placeholder="Search Image...." onChange={(e)=>setSearch(e.target.value)}/>
+                <input type="text" className={style.search_input} placeholder="Search Image...." onChange={(e)=>setSearch(e.target.value)}/>
 
-            <button onClick={()=>setShowImageForm(!showImageForm)}>{!showImageForm?"Add Image":"Cancel"}</button>
-        </div>
+                <button className={style.cancel_add_button} onClick={()=>setShowImageForm(!showImageForm)}>{!showImageForm?"Add Image":"Cancel"}</button>
+            </div>
 
-        <div>
-        {showImageForm && <ImageForm albumId={openAlbum.albumId} 
-                                            updateImage={updateImage}
-                                            setUpdateImage={setUpdateImage}
-                                            setShowImageForm={setShowImageForm} />}
+            <div>
+            {showImageForm && <ImageForm albumId={openAlbum.albumId} 
+                                                updateImage={updateImage}
+                                                setUpdateImage={setUpdateImage}
+                                                setShowImageForm={setShowImageForm} />}
 
-        </div>
-        <div className={style.imageList}>
-        {imageList.filter((image) => {
-                    return search.toLocaleLowerCase() === ''
-                    ? image
-                    :image.name.toLocaleLowerCase().includes(search);
-                    // map function to map over each image and show them inside a card
-                }).map((image,i) => <Image image={image} 
-                                                key={i}
-                                                index={i}
-                                                handleImageEdit={handleImageEdit} 
-                                                handleImageDelete={deleteImage} 
-                                                openLightbox={openLightbox}
-                                                />)}
-        </div>
-        {isOpen && (
+            </div>
+            <div className={style.imageList}>
+            {imageList.filter((image) => {
+                        return search.toLocaleLowerCase() === ''
+                        ? image
+                        :image.name.toLocaleLowerCase().includes(search);
+                        // map function to map over each image and show them inside a card
+                    }).map((image,i) => <Image image={image} 
+                                                    key={i}
+                                                    index={i}
+                                                    handleImageEdit={handleImageEdit} 
+                                                    handleImageDelete={deleteImage} 
+                                                    openLightbox={openLightbox}
+                                                    />)}
+            </div>
+            {isOpen && (
                 // main container
                 <div className={style.lightbox_overlay} onClick={closeLightbox}>
                     <div className={style.lightbox_container}>
@@ -112,6 +113,7 @@ export default function ImageList(props){
                     </div>
                 </div>
             )}
+        </div>
 
     </>);
 }

@@ -6,10 +6,8 @@
     margin-bottom: 20px;
     width: 100%;
     padding: 10px 20px;
-    border-radius: 10px;border-radius: 17px;
+    border-radius: 10px;
     background: linear-gradient(145deg, #f0f0f0, #cacaca);
-    box-shadow:  25px 25px 50px #bebebe,
-                 -25px -25px 50px #ffffff;
                  
 }
 
@@ -37,8 +35,8 @@
     text-transform: uppercase;
     transition: 0.5s;
     background-size: 200% auto;
-    color: #fefefe;            
-    box-shadow: 0 0 20px #eee;
+    color: #fefefe;           
+    box-shadow: 0 0 20px #1f1d1d;
     border-radius: 10px;
     display: block;
     font-weight: 800;
@@ -59,7 +57,7 @@
     transition: 0.5s;
     background-size: 200% auto;
     color: white;            
-    box-shadow: 0 0 20px #eee;
+    box-shadow: 0 0 20px #1f1d1d;
     border-radius: 10px;
     display: block;
     font-size: 1.2rem;

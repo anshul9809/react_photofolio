@@ -1,0 +1,79 @@
+.image_container{
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px -1px black;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin-bottom: 20px;
+
+}
+.image{
+    width: 100%;
+    height:100% !important;
+    overflow: hidden;
+}
+.image img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.image_Info{
+    width: 100%;
+    height: 25px;
+    color: black;
+    min-height: 50px;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.buttons_div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn_grad {
+    background-image: linear-gradient(to right, #003973 0%, #a7a75d  51%, #003973  100%);
+    padding: 5px 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #fefefe;            
+    box-shadow: 0 0 10px #eee;
+    border-radius: 10px;
+    display: block;
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.btn_grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #1e1e1e;
+    text-decoration: none;
+}
+         
+.delete_button{
+    background-image: linear-gradient(to right, #D31027 0%, #EA384D  51%, #D31027  100%);
+    padding: 5px 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 10px #eee;
+    border-radius: 10px;
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.delete_button:hover {
+    background-position: right center;
+    color: #1e1e1e;
+    text-decoration: none;
+}
