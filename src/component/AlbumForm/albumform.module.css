@@ -1,0 +1,78 @@
+.form_Container{
+    box-sizing: border-box;
+    transition: all ease-in-out 0.3s;
+    color: #1c1c1c;
+    text-shadow: 2px 2px 5px rgba(253, 253, 253, 0.1);
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #f0f0f0, #cacaca);
+                 
+}
+
+.albumForm{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.input_class{
+    flex: 1 0 60%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+.form_Container h1{
+    font-size: 2rem;
+}
+.btn_grad {
+    background-image: linear-gradient(to right, #003973 0%, #E5E5BE  51%, #003973  100%);
+    padding: 5px 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #fefefe;           
+    box-shadow: 0 0 20px #1f1d1d;
+    border-radius: 10px;
+    display: block;
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.btn_grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #1e1e1e;
+    text-decoration: none;
+}
+         
+.reset_button{
+    background-image: linear-gradient(to right, #D31027 0%, #EA384D  51%, #D31027  100%);
+    padding: 5px 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #1f1d1d;
+    border-radius: 10px;
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.reset_button:hover {
+    background-position: right center;
+    color: #1e1e1e;
+    text-decoration: none;
+}
+ 
+
+@media (max-width: 768px){
+    .form_Container h1{
+        font-size: 1rem;
+    }
+}

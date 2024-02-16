@@ -1,0 +1,33 @@
+.header{
+    background-color: rgba(0,0,0,0.5);
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.logo{
+    height: 80px;
+    width: 80px;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+.header_container{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_container a{
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .header-container{
+        width:90%;
+    }
+}

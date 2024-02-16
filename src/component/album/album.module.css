@@ -1,0 +1,48 @@
+.album_card_container{
+    flex: 1 0 20%;
+    box-sizing: border-box;
+    border: 1px solid #efefef;
+    padding: 10px;
+    transition: all ease-in-out 0.3s;
+    text-align: center;
+    overflow: hidden;
+    color: #efefef;
+    font-size: 24px;
+    font-weight: 800;
+    position: relative;
+    border-radius: 10px;
+}
+.album_card_container:hover{
+    transform: scale(1.01);
+    color: #fefefe;
+    border-radius: 5%;
+    background: #0F2027;
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    -webkit-box-shadow: inset 18px 20px 58px -3px rgba(242,250,248,1);
+    -moz-box-shadow: inset 18px 20px 58px -3px rgba(242,250,248,1);
+    box-shadow: inset 18px 20px 58px -3px rgba(242,250,248,1);
+}
+
+        
+
+.card_image{
+    background-image: url("../../static/images/thumbnail.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    cursor: pointer;
+    height: 300px;
+}
+
+@media (max-width: 1200px) {
+    .album_card_container{
+        flex-basis: 48%; /* 48% width for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .album_card_container{
+        flex-basis: 100%; /* 100% width for small screens */
+    }
+}
