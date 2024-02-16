@@ -35,25 +35,25 @@ export default function ImageForm(props){
     async function handleUpdateSubmit(event){
         console.log("name is ", imageTitleRef.current.value);
         event.preventDefault();
-        // const prevData = {
-        //     name:updateImage.name,
-        //     link:updateImage.link
-        // };
+        const prevData = {
+            name:updateImage.name,
+            link:updateImage.link
+        };
 
-        // const new_data = {
-        //     name:imageTitleRef.current.value,
-        //     link:imageUrlRef.current.value
-        // };
+        const new_data = {
+            name:imageTitleRef.current.value,
+            link:imageUrlRef.current.value
+        };
 
-        // const albumRef = doc(db, 'albums', albumId);
-        //  updateDoc(albumRef,{
-        //     imageList:arrayUnion(new_data)
-        // });
+        const albumRef = doc(db, 'albums', albumId);
+         updateDoc(albumRef,{
+            imageList:arrayUnion(new_data)
+        });
 
-        // updateDoc(albumRef,{
-        //     imageList:arrayRemove(prevData),
+        updateDoc(albumRef,{
+            imageList:arrayRemove(prevData),
             
-        // });
+        });
 
         toast.success(" Image Updated !")
 
@@ -91,17 +91,17 @@ export default function ImageForm(props){
             <div className={style.form_Container}>
                 <h1 className={style.form_Heading}>{!updateImage?"Add an Image":"Update Image"}</h1>
 
-                <form onSubmit={updateImage?handleUpdateSubmit:handleSubmit}>
-                    <input type="text" ref={imageTitleRef} required/>
-                    <input type="text" ref={imageUrlRef} required/>
+                <form className={style.imageForm} onSubmit={updateImage?handleUpdateSubmit:handleSubmit}>
+                    <input type="text" ref={imageTitleRef} className={style.input_class} required placeholder="Title"/>
+                    <input type="text" ref={imageUrlRef} className={style.input_class} required placeholder="URL of image"/>
 
-                    <button 
+                    <button type="submit" className={style.btn_grad}>
+                        {updateImage?"Update":"Add"}
+                    </button>
+                    <button className={style.clear_button}
                         onClick={clearForm}>Clear
                     </button>
 
-                    <button type="submit">
-                        {updateImage?"Update":"Add"}
-                    </button>
                 </form>
             </div>
         </>
